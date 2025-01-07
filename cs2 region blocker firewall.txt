@@ -1,0 +1,48 @@
+"ip Blocker for cs2 regions on a firewall level"
+Run CMD as adminstrator
+and copy pasta :netsh bla bla bla to block selected regions in cs2 
+example:
+netsh advfirewall firewall add rule name="Block CS2 Russia 1" dir=out action=block remoteip=185.44.76.0/22 program="O:\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe"
+netsh advfirewall firewall add rule name="Block CS2 Russia 2" dir=out action=block remoteip=185.97.136.0/22 program="O:\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe"
+
+this will force your client to not establish an connected to the selected server.
+also you have to edit the program location of theese so if your cs2.exe is in another location, change it.
+
+
+
+Russia:
+
+netsh advfirewall firewall add rule name="Block CS2 Russia 1" dir=out action=block remoteip=185.44.76.0/22 program="O:\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe"
+netsh advfirewall firewall add rule name="Block CS2 Russia 2" dir=out action=block remoteip=185.97.136.0/22 program="O:\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe"
+
+
+EU East:
+
+netsh advfirewall firewall add rule name="Block CS2 EU East 1" dir=out action=block remoteip=91.211.246.0/23 program="O:\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe"
+netsh advfirewall firewall add rule name="Block CS2 EU East 2" dir=out action=block remoteip=89.44.0.0/16 program="O:\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe"
+
+
+Turkey:
+
+netsh advfirewall firewall add rule name="Block CS2 Turkey 1" dir=out action=block remoteip=185.48.24.0/22 program="O:\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe"
+netsh advfirewall firewall add rule name="Block CS2 Turkey 2" dir=out action=block remoteip=185.87.48.0/22 program="O:\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe"
+
+
+Romania:
+
+netsh advfirewall firewall add rule name="Block CS2 Romania 1" dir=out action=block remoteip=5.14.0.0/15 program="O:\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe"
+netsh advfirewall firewall add rule name="Block CS2 Romania 2" dir=out action=block remoteip=37.251.128.0/17 program="O:\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe"
+
+Middle East:
+
+netsh advfirewall firewall add rule name="Block CS2 Middle East 1" dir=out action=block remoteip=31.14.128.0/17 program="O:\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe"
+netsh advfirewall firewall add rule name="Block CS2 Middle East 2" dir=out action=block remoteip=94.142.128.0/18 program="O:\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe"
+
+North Africa:
+
+netsh advfirewall firewall add rule name="Block CS2 North Africa 1" dir=out action=block remoteip=41.0.0.0/8 program="O:\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe"
+
+
+Removing a Rule
+If you need to remove a specific rule, use:
+netsh advfirewall firewall delete rule name="Block CS2 Russia 1"
